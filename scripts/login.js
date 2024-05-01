@@ -38,5 +38,6 @@ formLogin.addEventListener('submit', (e) => {
       const token = data.token
       localStorage.setItem('token', token)
       localStorage.setItem('userInfo', JSON.stringify(data.user))
+      location.replace('../pages/homepage.html')
     })
 })
