@@ -45,11 +45,10 @@
   flex-direction: column;
   gap: 50px;
   align-items: start;
-  justify-content: center;
+  justify-content: space-around;
   & > div {
     margin-left: 60px;
   }
-  // border: 2px solid red;
 }
 
 .body-logo {
