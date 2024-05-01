@@ -68,7 +68,15 @@ fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance', {
           inputRange.type = 'range'
           inputRange.min = 0
           inputRange.max = 100
-          inputRange.style.background = `linear-gradient(to right, red ${value}%, #ddd ${value}%)`
+          if (value >= 0 && value < 10) {
+            inputRange.style.background = `linear-gradient(to right, #8BBF36 ${value}%, #ddd ${value}%)`
+          } else if (value >= 10 && value < 20) {
+            inputRange.style.background = `linear-gradient(to right, #D7BD38 ${value}%, #ddd ${value}%)`
+          } else if (value >= 20 && value < 30) {
+            inputRange.style.background = `linear-gradient(to right, #C75E5E ${value}%, #ddd ${value}%)`
+          } else {
+            inputRange.style.background = `linear-gradient(to right, red ${value}%, #ddd ${value}%)`
+          }
 
           percent.textContent = `${value}%`
 
