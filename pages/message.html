@@ -12,7 +12,7 @@
     />
     <link rel="icon" href="../assets/favicon.ico" />
     <link rel="stylesheet" href="../stylesCss/main.css" />
-    <link rel="stylesheet" href="../stylesCss/attendance.css" />
+    <link rel="stylesheet" href="../stylesCss/message.css" />
   </head>
   <body>
     <div class="container">
@@ -43,48 +43,16 @@
           <button class="btn-signOut">[Sign out]</button>
         </div>
         <div class="main-info">
-          <div class="current-page">Electronic Attendance</div>
+          <div class="current-page">Messages</div>
           <div class="current-body">
-            <table class="table-att">
-              <thead>
-                <tr>
-                  <th>Code</th>
-                  <th>Course name</th>
-                  <th>
-                    <img
-                      src="../assets/img/statuses/att.png"
-                      alt="attendance"
-                    />
-                  </th>
-                  <th>
-                    <img src="../assets/img/statuses/abs.png" alt="absence" />
-                  </th>
-                  <th>
-                    <img src="../assets/img/statuses/man.png" alt="manual" />
-                  </th>
-                  <th>
-                    <img src="../assets/img/statuses/per.png" alt="permitted" />
-                  </th>
-                  <th>
-                    <img
-                      src="../assets/img/statuses/atp.png"
-                      alt="absence-to-present"
-                    />
-                  </th>
-                  <th>Absence % (Limit: 30%)</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-            <table class="table-status"></table>
-            <div class="back-wrapper">
-              <button class="btn-back">Go Back</button>
+            <div class="receuived-messages">
+              <p>Received messages</p>
             </div>
           </div>
         </div>
       </main>
     </div>
     <script src="../scripts/main.js"></script>
-    <script src="../scripts/attendance.js"></script>
+    <script src="../scripts/message.js"></script>
   </body>
 </html>

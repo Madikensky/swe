@@ -27,6 +27,10 @@ buttons[4].addEventListener('click', () => {
   replaceListener('../pages/profile.html')
 })
 
+buttons[5].addEventListener('click', () => {
+  replaceListener('../pages/message.html')
+})
+
 buttons[7].addEventListener('click', () => {
   replaceListener('../index.html')
 })

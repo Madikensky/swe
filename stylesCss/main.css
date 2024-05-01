@@ -11,7 +11,8 @@
   height: 100%;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none; }
+  display: none;
+  backdrop-filter: blur(5px); }
 
 .loading {
   width: 100%;

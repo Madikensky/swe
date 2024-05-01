@@ -1,17 +1,16 @@
 .current-body {
   background: none;
   display: flex;
-  justify-content: center;
   align-items: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 table {
   margin-top: 50px;
   width: 95%;
   font-weight: 500;
-}
-
-table {
   border-collapse: collapse;
   display: none;
 }
@@ -25,6 +24,7 @@ td {
 
 .course-code {
   color: #4760e4;
+  cursor: pointer;
 }
 
 th img {
@@ -56,4 +56,18 @@ input[type='range'] {
   left: 50px;
   height: 30px;
   border: 1px solid black;
+}
+
+.btn-back {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.back-wrapper {
+  margin-top: 20px;
+  width: 95%;
+  display: flex;
+  justify-content: end;
 }
