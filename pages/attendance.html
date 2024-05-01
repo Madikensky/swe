@@ -40,7 +40,66 @@
         </div>
         <div class="main-info">
           <div class="current-page">Electronic Attendance</div>
-          <div class="current-body"></div>
+          <div class="current-body">
+            <table class="table-att">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Course name</th>
+                  <th>
+                    <img
+                      src="../assets/img/statuses/att.png"
+                      alt="attendance"
+                    />
+                  </th>
+                  <th>
+                    <img src="../assets/img/statuses/abs.png" alt="absence" />
+                  </th>
+                  <th>
+                    <img src="../assets/img/statuses/man.png" alt="manual" />
+                  </th>
+                  <th>
+                    <img src="../assets/img/statuses/per.png" alt="permitted" />
+                  </th>
+                  <th>
+                    <img
+                      src="../assets/img/statuses/atp.png"
+                      alt="absence-to-present"
+                    />
+                  </th>
+                  <th>Absence % (Limit: 30%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="course-code">CSS 342</td>
+                  <td>Software Engineering</td>
+                  <td>40</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>
+                    <div class="absence-percent">
+                      <input
+                        type="range"
+                        value="0"
+                        style="
+                          background: linear-gradient(
+                            to right,
+                            red 30%,
+                            #ddd 30%
+                          );
+                        "
+                      />
+                      <span>30%</span>
+                      <span class="limit"></span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </main>
     </div>
