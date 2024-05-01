@@ -1,0 +1,17 @@
+{
+  "name": "muha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "login": "node-sass -w stylesScss/login.scss stylesCss/login.css",
+    "homepage": "node-sass -w stylesScss/homepage.scss stylesCss/homepage.css",
+    "main": "node-sass -w stylesScss/main.scss stylesCss/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="stylesCss/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-body">
+        <div class="body-logo">
+          <div>
+            <img src="assets/img/logo.svg" alt="" />
+          </div>
+          <h1>Happy University</h1>
+        </div>
+        <div class="body-form">
+          <form class="form-login">
+            <div class="form-welcome">Welcome to H.U</div>
+            <div class="form-id">
+              <label for="input-id">Email</label>
+              <input
+                type="text"
+                name="id"
+                id="input-id"
+                placeholder="random@example.com"
+              />
+              <div class="email-error">* Email not entered or incorrect</div>
+            </div>
+            <div class="form-psw">
+              <label for="input-psw">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="input-psw"
+                placeholder="password"
+              />
+              <div class="psw-error">* Password not entered or incorrect</div>
+            </div>
+            <div class="form-forgot">Forgot password?</div>
+            <div class="form-submit">
+              <button type="submit" class="submit-btn">Log In</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="right-body"></div>
+    </div>
+    <script src="./scripts/login.js"></script>
+  </body>
+</html>
