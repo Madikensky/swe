@@ -74,7 +74,8 @@ formEdit.addEventListener('submit', (e) => {
       return response.json()
     })
     .then((data) => {
-      localStorage.setItem('userInfo', JSON.stringify(data))
+      localStorage.setItem('userInfo', JSON.stringify(data.user))
+      localStorage.setItem('token', data.token)
       console.log(userInfo)
       location.reload()
     })

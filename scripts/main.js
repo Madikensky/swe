@@ -1,4 +1,4 @@
-const token = localStorage.getItem('token')
+let token = localStorage.getItem('token')
 let userInfo = JSON.parse(localStorage.getItem('userInfo'))
 console.log(token)
 console.log(userInfo)
