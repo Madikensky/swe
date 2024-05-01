@@ -16,8 +16,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  align-items: start;
-  justify-content: space-around; }
+  align-items: start; }
   .left-body > div {
     margin-left: 60px; }
 
