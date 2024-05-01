@@ -56,6 +56,8 @@ btnCancel.addEventListener('click', () => {
 
 formEdit.addEventListener('submit', (e) => {
   e.preventDefault()
+  overlay.style.display = 'block'
+  loading.style.display = 'flex'
   fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/profile/update', {
     method: 'POST',
     body: JSON.stringify({

@@ -2,6 +2,9 @@ const formLogin = document.querySelector('.form-login')
 const emailError = document.querySelector('.email-error')
 const pswError = document.querySelector('.psw-error')
 
+const overlay = document.querySelector('.overlay')
+const loading = document.querySelector('.loading')
+
 function validateValues(value) {
   pswError.style.display = value
   emailError.style.display = value
@@ -9,6 +12,8 @@ function validateValues(value) {
 
 formLogin.addEventListener('submit', (e) => {
   e.preventDefault()
+  loading.style.display = 'flex'
+  overlay.style.display = 'block'
 
   const email = document.getElementById('input-id')
   const psw = document.getElementById('input-psw')
@@ -28,8 +33,12 @@ formLogin.addEventListener('submit', (e) => {
     .then((response) => {
       if (!response.ok) {
         validateValues('block')
+        loading.style.display = 'none'
+        overlay.style.display = 'none'
         throw new Error('Some mistakes')
       }
+      loading.style.display = 'none'
+      overlay.style.display = 'none'
       validateValues('none')
       return response.json()
     })

@@ -1,4 +1,8 @@
 const tableBody = document.querySelector('tbody')
+const table = document.querySelector('table')
+
+overlay.style.display = 'block'
+loading.style.display = 'flex'
 
 fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance', {
   method: 'GET',
@@ -11,6 +15,9 @@ fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance', {
     if (!response.ok) {
       throw new Error('Some errors')
     }
+    overlay.style.display = 'none'
+    loading.style.display = 'none'
+    table.style.display = 'table'
     return response.json()
   })
   .then((response) => {
@@ -48,6 +55,7 @@ fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance', {
         const cell = newRow.insertCell()
         if (i === 0) {
           cell.className = 'course-code'
+          cell.setAttribute('data-classId', classId)
         }
         if (i === 7) {
           const absencePercent = document.createElement('div')
@@ -63,6 +71,7 @@ fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance', {
           inputRange.style.background = `linear-gradient(to right, red ${value}%, #ddd ${value}%)`
 
           percent.textContent = `${value}%`
+
           limit.className = 'limit'
 
           absencePercent.append(inputRange, percent, limit)

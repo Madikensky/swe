@@ -3,6 +3,9 @@ let userInfo = JSON.parse(localStorage.getItem('userInfo'))
 console.log(token)
 console.log(userInfo)
 
+const overlay = document.querySelector('.overlay')
+const loading = document.querySelector('.loading')
+
 const username = document.querySelector('.header-username span')
 username.textContent = userInfo.fullName
 

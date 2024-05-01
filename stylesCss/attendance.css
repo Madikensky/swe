@@ -10,7 +10,8 @@ table {
   font-weight: 500; }
 
 table {
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  display: none; }
 
 th,
 td {
