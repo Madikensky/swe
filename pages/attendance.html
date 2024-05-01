@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Attendance</title>
+    <title>Electronic Attendance</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +12,7 @@
     />
     <link rel="icon" href="../assets/favicon.ico" />
     <link rel="stylesheet" href="../stylesCss/main.css" />
-    <link rel="stylesheet" href="../stylesCss/profile.css" />
+    <link rel="stylesheet" href="../stylesCss/attendance.css" />
   </head>
   <body>
     <div class="container">
@@ -39,56 +39,12 @@
           <button class="btn-signOut">[Sign out]</button>
         </div>
         <div class="main-info">
-          <div class="current-page">User Profile</div>
-          <div class="current-body">
-            <form class="form-edit">
-              <div class="form-id">
-                <label for="user-id">ID:</label>
-                <input type="text" id="user-id" readonly disabled />
-              </div>
-              <div class="form-fullName">
-                <label for="user-fullName">Full Name:</label>
-                <input type="text" id="user-fullName" readonly disabled />
-              </div>
-              <div class="form-role">
-                <label for="user-role">User Role:</label>
-                <input type="text" id="user-role" readonly disabled />
-              </div>
-              <div class="form-email">
-                <label for="user-email">Email:</label>
-                <input
-                  type="text"
-                  id="user-email"
-                  name="email"
-                  readonly
-                  disabled
-                />
-              </div>
-              <div class="form-phone">
-                <label for="user-phone">Phone Number:</label>
-                <input type="text" id="user-phone" readonly disabled />
-              </div>
-              <div class="form-psw">
-                <label for="user-psw">Password:</label>
-                <input
-                  type="password"
-                  id="user-psw"
-                  readonly
-                  value="3453245t"
-                  disabled
-                />
-              </div>
-              <div class="form-buttons">
-                <button class="btn-edit" type="button">Edit</button>
-                <button class="btn-cancel" type="button">Cancel</button>
-                <button class="btn-submit" type="submit">Submit</button>
-              </div>
-            </form>
-          </div>
+          <div class="current-page">Electronic Attendance</div>
+          <div class="current-body"></div>
         </div>
       </main>
     </div>
     <script src="../scripts/main.js"></script>
-    <script src="../scripts/profile.js"></script>
+    <script src="../scripts/attendance.js"></script>
   </body>
 </html>

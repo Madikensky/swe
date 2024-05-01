@@ -16,6 +16,10 @@ buttons[0].addEventListener('click', () => {
   replaceListener('../pages/homepage.html')
 })
 
+buttons[3].addEventListener('click', () => {
+  replaceListener('../pages/attendance.html')
+})
+
 buttons[4].addEventListener('click', () => {
   replaceListener('../pages/profile.html')
 })
