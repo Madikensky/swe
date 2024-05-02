@@ -13,9 +13,10 @@ function replaceListener(page) {
   location.replace(page)
 }
 
-const buttons = document.querySelectorAll('button')
+const buttons = document.querySelectorAll('.btn')
 
 buttons[0].addEventListener('click', () => {
+  console.log('df')
   replaceListener('../pages/homepage.html')
 })
 

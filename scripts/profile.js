@@ -10,6 +10,14 @@ const btnSubmit = document.querySelector('.btn-submit')
 
 const formEdit = document.querySelector('.form-edit')
 
+const modal = document.querySelector('.modal')
+const modalBtn = document.querySelector('.message-btn')
+
+modalBtn.addEventListener('click', () => {
+  modal.style.display = 'none'
+  location.reload()
+})
+
 console.log(userInfo)
 
 userId.value = userInfo.id
@@ -79,7 +87,9 @@ formEdit.addEventListener('submit', (e) => {
       localStorage.setItem('userInfo', JSON.stringify(data.user))
       localStorage.setItem('token', data.token)
       console.log(userInfo)
-      location.reload()
+      overlay.style.display = 'none'
+      loading.style.display = 'none'
+      modal.style.display = 'flex'
     })
   setMode('block', 'none')
   addAttributes()
