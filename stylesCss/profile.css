@@ -1,6 +1,9 @@
 .current-body {
   background: none; }
 
+.current-page {
+  text-transform: capitalize; }
+
 .form-edit {
   width: 100%;
   height: 100%;
@@ -93,3 +96,7 @@ label {
 
 .btn-submit {
   pointer-events: none; }
+
+.hierarchy {
+  font-size: 20px;
+  color: #490d00; }

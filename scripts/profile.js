@@ -13,6 +13,8 @@ const formEdit = document.querySelector('.form-edit')
 const modal = document.querySelector('.modal')
 const modalBtn = document.querySelector('.message-btn')
 
+const hierarchy = document.querySelector('.current-page')
+
 const spanPhone = document.querySelector('.form-phone span')
 
 const btnProfile = document.querySelector('.btn-profile')
@@ -77,11 +79,13 @@ userPhone.addEventListener('input', (e) => {
 
 btnEdit.addEventListener('click', () => {
   setMode('none', 'block')
+  hierarchy.textContent = `User Profile -> Edit`
   removeAttributes()
 })
 
 btnCancel.addEventListener('click', () => {
   setMode('block', 'none')
+  hierarchy.textContent = 'User Profile'
   addAttributes()
 })
 
@@ -110,6 +114,7 @@ formEdit.addEventListener('submit', (e) => {
       localStorage.setItem('userInfo', JSON.stringify(data.user))
       localStorage.setItem('token', data.token)
       console.log(userInfo)
+      hierarchy.textContent = 'User Profile'
       overlay.style.display = 'none'
       loading.style.display = 'none'
       modal.style.display = 'flex'
