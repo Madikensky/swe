@@ -92,8 +92,10 @@ main {
 
 .current-page {
   font-weight: 500;
-  font-size: 30px;
+  // font-size: 30px;
+  font-size: 20px;
   text-align: center;
+  text-transform: capitalize;
   color: #490d00;
 }
 

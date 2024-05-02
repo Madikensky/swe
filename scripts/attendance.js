@@ -7,6 +7,8 @@ const btnProfile = document.querySelector('.btn-attendance')
 btnProfile.style.color = '#fff'
 btnProfile.style.backgroundColor = '#775732'
 
+const currPage = document.querySelector('.current-page')
+
 overlay.style.display = 'block'
 loading.style.display = 'flex'
 
@@ -65,6 +67,8 @@ fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance', {
         if (i === 0) {
           cell.className = 'course-code'
           cell.setAttribute('data-classId', classId)
+          cell.setAttribute('data-classCode', courseCode)
+          cell.setAttribute('data-className', courseName)
         }
         if (i === 7) {
           const absencePercent = document.createElement('div')
@@ -86,6 +90,7 @@ fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance', {
           } else {
             inputRange.style.background = `linear-gradient(to right, red ${value}%, #ddd ${value}%)`
             retakeAbsence['from'] = courseCode
+            retakeAbsence['course-name'] = courseName
             retakeAbsence['send-date'] = lastAbs
             retakeAbsence['subject'] = 'Attendance'
             retakeAbsence['content'] =
@@ -111,6 +116,8 @@ fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance', {
     courses.forEach((course) => {
       course.addEventListener('click', () => {
         const classId = course.getAttribute('data-classid')
+        const classCode = course.getAttribute('data-classCode')
+        const className = course.getAttribute('data-className')
         overlay.style.display = 'block'
         loading.style.display = 'flex'
         fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance/class', {
@@ -135,6 +142,7 @@ fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance', {
           })
           .then((data) => {
             console.log(data)
+            currPage.textContent = `Electronic attendance -> class -> ${className} (${classCode})`
             tableStatus.style.display = 'table'
             table.style.display = 'none'
             btnBack.style.display = 'block'
@@ -174,6 +182,7 @@ fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance', {
               table.style.display = 'table'
               btnBack.style.display = 'none'
               tableStatus.removeChild(tableStatus.children[0])
+              currPage.textContent = 'electronic attendance'
             })
           })
       })
