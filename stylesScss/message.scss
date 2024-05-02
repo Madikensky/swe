@@ -1,7 +1,63 @@
 .current-body {
   background: none;
-  border: 2px solid red;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  flex-direction: column;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  text-align: center;
+  font-weight: 500;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+th {
+  color: #b0a1a1;
+}
+
+.received-message {
+  width: 80%;
+  // display: flex;
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+  & th {
+    width: 20%;
+  }
+
+  & button {
+    width: 10%;
+    padding: 5px;
+    border-radius: 10px;
+    // background-color: #fff9f9;
+    cursor: pointer;
+  }
+
+  & div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // align-items: center;
+    width: 100%;
+  }
+
+  & table {
+    width: 100%;
+    text-align: start;
+  }
+
+  & p {
+    color: #681717;
+    font-weight: 500;
+  }
 }
