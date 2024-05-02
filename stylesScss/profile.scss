@@ -104,3 +104,13 @@ label {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.form-phone span {
+  font-size: 15px;
+  color: red;
+  visibility: hidden;
+}
+
+.btn-submit {
+  pointer-events: none;
+}

@@ -3,6 +3,10 @@ const table = document.querySelector('.table-att')
 const tableStatus = document.querySelector('.table-status')
 const btnBack = document.querySelector('.btn-back')
 
+const btnProfile = document.querySelector('.btn-attendance')
+btnProfile.style.color = '#fff'
+btnProfile.style.backgroundColor = '#775732'
+
 overlay.style.display = 'block'
 loading.style.display = 'flex'
 

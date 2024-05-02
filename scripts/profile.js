@@ -13,6 +13,12 @@ const formEdit = document.querySelector('.form-edit')
 const modal = document.querySelector('.modal')
 const modalBtn = document.querySelector('.message-btn')
 
+const spanPhone = document.querySelector('.form-phone span')
+
+const btnProfile = document.querySelector('.btn-profile')
+btnProfile.style.color = '#fff'
+btnProfile.style.backgroundColor = '#775732'
+
 modalBtn.addEventListener('click', () => {
   modal.style.display = 'none'
   location.reload()
@@ -51,6 +57,23 @@ function addAttributes() {
   userPhone.setAttribute('readonly', '')
   userPhone.style.backgroundColor = '#d9d9d9'
 }
+
+function checkNumber(phoneNumber) {
+  const regex = /^\d{1}\-\d{3}\-\d{3}\-\d{4}$/
+  return regex.test(phoneNumber)
+}
+
+userPhone.addEventListener('input', (e) => {
+  if (!checkNumber(userPhone.value)) {
+    btnSubmit.setAttribute('disabled', '')
+    btnSubmit.style.pointerEvents = 'none'
+    spanPhone.style.visibility = 'unset'
+  } else {
+    btnSubmit.style.pointerEvents = 'all'
+    btnSubmit.removeAttribute('disabled')
+    spanPhone.style.visibility = 'hidden'
+  }
+})
 
 btnEdit.addEventListener('click', () => {
   setMode('none', 'block')

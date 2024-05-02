@@ -18,6 +18,7 @@ const buttons = document.querySelectorAll('.btn')
 buttons[0].addEventListener('click', () => {
   console.log('df')
   replaceListener('../pages/homepage.html')
+  console.log(buttons[0])
 })
 
 buttons[3].addEventListener('click', () => {

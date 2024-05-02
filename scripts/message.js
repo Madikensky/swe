@@ -1,6 +1,10 @@
 const retakeAbsences = JSON.parse(localStorage.getItem('retakeAbsences'))
 console.log(retakeAbsences)
 
+const btnProfile = document.querySelector('.btn-message')
+btnProfile.style.color = '#fff'
+btnProfile.style.backgroundColor = '#775732'
+
 const table = document.querySelector('.table-msg')
 const tableReceived = document.querySelector('.table-received')
 
@@ -27,15 +31,17 @@ retakeAbsences.forEach((abs, i) => {
   rowInfo.innerHTML = abs.subject
   rowSender.innerHTML = abs.from
 
-  row.setAttribute('data-sender', abs.from)
-  row.setAttribute('data-sendData', abs['send-date'])
-  row.setAttribute('data-subject', abs.subject)
-  row.setAttribute('data-content', abs.content)
-  row.style.cursor = 'pointer'
+  rowSender.className = 'row-sender'
+  rowSender.style.cursor = 'pointer'
+
+  rowSender.setAttribute('data-sender', abs.from)
+  rowSender.setAttribute('data-sendData', abs['send-date'])
+  rowSender.setAttribute('data-subject', abs.subject)
+  rowSender.setAttribute('data-content', abs.content)
   row.className = 'data-row'
 })
 
-const allRows = document.querySelectorAll('.data-row')
+const allRows = document.querySelectorAll('.row-sender')
 allRows.forEach((row) => {
   row.addEventListener('click', () => {
     receivedMessage.style.display = 'flex'
