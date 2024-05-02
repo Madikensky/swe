@@ -1,10 +1,10 @@
 .current-body {
   background: none;
   display: flex;
-  align-items: flex-start;
-  align-items: center;
   flex-direction: column;
-  gap: 10px; }
+  gap: 10px;
+  align-items: center;
+  justify-content: center; }
 
 table {
   margin-top: 50px;
@@ -59,3 +59,26 @@ input[type='range'] {
   width: 95%;
   display: flex;
   justify-content: end; }
+
+.admin-wrapper {
+  width: 70%;
+  display: flex;
+  display: none;
+  align-items: start;
+  justify-content: center;
+  max-height: 450px;
+  overflow-y: auto; }
+  .admin-wrapper table {
+    width: 98%;
+    display: table;
+    margin-top: 0px; }
+
+.student-statistics {
+  width: 90%;
+  display: table;
+  margin-top: 0px; }
+
+.btn-toStudentsList {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px; }

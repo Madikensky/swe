@@ -3,6 +3,8 @@ let userInfo = JSON.parse(localStorage.getItem('userInfo'))
 console.log(token)
 console.log(userInfo)
 
+const role = userInfo.userRole
+
 const overlay = document.querySelector('.overlay')
 const loading = document.querySelector('.loading')
 
