@@ -8,7 +8,8 @@
     "attendance": "node-sass -w stylesScss/attendance.scss stylesCss/attendance.css",
     "main": "node-sass -w stylesScss/main.scss stylesCss/main.css",
     "profile": "node-sass -w stylesScss/profile.scss stylesCss/profile.css",
-    "message": "node-sass -w stylesScss/message.scss stylesCss/message.css"
+    "message": "node-sass -w stylesScss/message.scss stylesCss/message.css",
+    "permission": "node-sass -w stylesScss/permission.scss stylesCss/permission.css"
   },
   "keywords": [],
   "author": "",

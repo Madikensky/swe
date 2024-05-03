@@ -12,6 +12,7 @@ loading.style.display = 'flex'
 
 if (role === 'admin') {
   backWrapper.style.display = 'none'
+  currBody.style.justifyContent = 'center'
   const table = document.querySelector('.table-admin')
   fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/admin/attendance', {
     headers: {

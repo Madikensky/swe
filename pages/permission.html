@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permission</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../assets/favicon.ico" />
+    <link rel="stylesheet" href="../stylesCss/main.css" />
+    <link rel="stylesheet" href="../stylesCss/permission.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay"></div>
+      <div class="loading">
+        <img src="../assets/Dual Ring@1x-1.0s-200px-200px.svg" alt="" />
+      </div>
+      <header>
+        <div class="header-logo">
+          <div>
+            <img src="../assets/img/logo.svg" alt="" />
+          </div>
+          <h1>Happy University</h1>
+        </div>
+        <h1 class="header-username">User: <span></span></h1>
+      </header>
+      <main>
+        <div class="main-navbar">
+          <button class="btn-home btn">Home Page</button>
+          <div class="nav-buttons">
+            <button class="btn-registration btn">Course Registration</button>
+            <button class="btn-schedule btn">Course Schedule</button>
+            <button class="btn-attendance btn">Electronic Attendance</button>
+            <button class="btn-profile btn">User Profile</button>
+            <button class="btn-message btn">Notification</button>
+            <button class="btn-permission btn">Permission</button>
+          </div>
+          <button class="btn-signOut btn">[Sign out]</button>
+        </div>
+        <div class="main-info">
+          <div class="current-page">Permission</div>
+          <div class="current-body">
+            <form class="form-permission">
+              <div class="fullName">
+                <label for="student-fullName">Full name:</label>
+                <input type="text" id="student-fullName" />
+              </div>
+              <div class="email">
+                <label for="student-email">Email</label>
+                <input type="text" id="student-email" />
+              </div>
+              <div class="student-date">
+                <label for="">Date:</label>
+                <div>
+                  <label for="date-start" style="font-size: 12px">start:</label>
+                  <input type="text" id="date-start" />
+                </div>
+                <div>
+                  <label for="date-end" style="font-size: 12px">end:</label>
+                  <input type="text" id="date-end" />
+                </div>
+              </div>
+              <div class="permission-img">
+                <label for="student-img">Image:</label>
+                <input type="file" id="student-img" />
+              </div>
+              <div class="reason">
+                <label for="student-reason">Reason:</label>
+                <input type="text" id="student-reason" />
+              </div>
+              <div class="btn-wrapper">
+                <button type="submit" class="btn-send">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/permission.js"></script>
+  </body>
+</html>

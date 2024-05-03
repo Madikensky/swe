@@ -35,6 +35,10 @@ buttons[5].addEventListener('click', () => {
   replaceListener('../pages/message.html')
 })
 
+buttons[6].addEventListener('click', () => {
+  replaceListener('../pages/permission.html')
+})
+
 buttons[7].addEventListener('click', () => {
   replaceListener('../index.html')
 })

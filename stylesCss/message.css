@@ -43,3 +43,33 @@ th {
   .received-message p {
     color: #681717;
     font-weight: 500; }
+
+.message-certificates {
+  width: 80%;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  gap: 15px; }
+  .message-certificates > div:first-child {
+    color: #681717;
+    font-size: 20px; }
+  .message-certificates > div:last-child {
+    display: flex;
+    justify-content: start; }
+  .message-certificates table {
+    width: 70%; }
+  .message-certificates img {
+    width: 30px;
+    margin-left: 5px; }
+
+.btnBack {
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer; }
+
+.permission-table {
+  width: 80%; }
+
+a {
+  text-decoration: none;
+  color: #681717; }
