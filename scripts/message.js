@@ -9,6 +9,11 @@ const btnProfile = document.querySelector('.btn-message')
 btnProfile.style.color = '#fff'
 btnProfile.style.backgroundColor = '#775732'
 
+if (count > 0) {
+  btnMessage.removeChild(notificationTotal)
+  localStorage.setItem('count', 0)
+}
+
 const btnBack = document.querySelector('.btnBack')
 
 const table = document.querySelector('.table-msg')
