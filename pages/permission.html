@@ -99,20 +99,36 @@
                 </div>
               </div>
               <div class="permission-img">
-                <label for="student-img">Image:&nbsp;<span>*</span></label>
-                <input required type="file" id="student-img" />
+                <label for="">Image:&nbsp;<span>*</span></label>
+                <label for="student-img" class="main-label">Choose file</label>
+                <input
+                  required
+                  type="file"
+                  id="student-img"
+                  accept=".pdf, .jpg, .jpeg"
+                />
+                <div class="file-info">
+                  <p>File extension: <span></span></p>
+                  <p>File size: <span></span></p>
+                </div>
               </div>
               <div class="reason">
                 <label for="student-reason">Reason:&nbsp;<span>*</span></label>
-                <input
+                <textarea
                   required
                   type="text"
                   id="student-reason"
                   placeholder="Enter the reason"
-                />
+                ></textarea>
+                <!-- <input
+                  required
+                  type="text"
+                  id="student-reason"
+                  placeholder="Enter the reason"
+                /> -->
               </div>
               <div class="btn-wrapper">
-                <button type="submit" class="btn-send">Send</button>
+                <button type="submit" disabled class="btn-send">Send</button>
               </div>
             </form>
           </div>

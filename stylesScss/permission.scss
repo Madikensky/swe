@@ -30,6 +30,55 @@
   }
 }
 
+#student-reason {
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.permission-img {
+  & input {
+    background-color: #0b6278;
+    display: none;
+  }
+  & label:nth-child(2) {
+    // background-color: red;
+    background-color: #775732;
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    // overflow: hidden;
+    height: 30px;
+  }
+}
+
+.btn-send {
+  pointer-events: none;
+}
+
+.file-info {
+  // color: red;
+  font-size: 15px;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  & p span {
+    color: red;
+  }
+  display: none;
+}
+
 label {
   font-size: 20px;
   font-weight: 500;
