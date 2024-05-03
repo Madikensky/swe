@@ -5,6 +5,12 @@ console.log(userInfo)
 
 const role = userInfo.userRole
 
+const permBtn = document.querySelector('.btn-permission')
+if (role === 'admin') {
+  permBtn.setAttribute('disabled', '')
+  permBtn.style.pointerEvents = 'none'
+}
+
 const overlay = document.querySelector('.overlay')
 const loading = document.querySelector('.loading')
 

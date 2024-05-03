@@ -78,6 +78,9 @@ userPhone.addEventListener('input', (e) => {
 })
 
 btnEdit.addEventListener('click', () => {
+  btnSubmit.removeAttribute('disabled')
+  btnSubmit.style.pointerEvents = 'all'
+
   setMode('none', 'block')
   hierarchy.textContent = `User Profile -> Edit`
   removeAttributes()

@@ -20,6 +20,15 @@
       <div class="loading">
         <img src="../assets/Dual Ring@1x-1.0s-200px-200px.svg" alt="" />
       </div>
+      <div class="modal-perm">
+        <div class="perm-message">
+          Your permission successfully sended!
+          <img src="/assets/img/check.png" alt="" />
+          <span
+            ><img src="../assets/img/statuses/abs.png" class="exit" alt=""
+          /></span>
+        </div>
+      </div>
       <header>
         <div class="header-logo">
           <div>
@@ -27,7 +36,7 @@
           </div>
           <h1>Happy University</h1>
         </div>
-        <h1 class="header-username">User: <span></span></h1>
+        <h1 class="header-username">User: &nbsp;<span>*</span></h1>
       </header>
       <main>
         <div class="main-navbar">
@@ -47,31 +56,60 @@
           <div class="current-body">
             <form class="form-permission">
               <div class="fullName">
-                <label for="student-fullName">Full name:</label>
-                <input type="text" id="student-fullName" />
+                <label for="student-fullName"
+                  >Full name:&nbsp;<span>*</span></label
+                >
+                <input required type="text" id="student-fullName" disabled />
               </div>
               <div class="email">
-                <label for="student-email">Email</label>
-                <input type="text" id="student-email" />
+                <label for="student-email">Email:&nbsp;<span>*</span></label>
+                <input required type="text" id="student-email" disabled />
               </div>
               <div class="student-date">
-                <label for="">Date:</label>
-                <div>
-                  <label for="date-start" style="font-size: 12px">start:</label>
-                  <input type="text" id="date-start" />
+                <label for="">Date:&nbsp;<span>*</span></label>
+                <div class="date-wrapper">
+                  <label for="date-start" style="font-size: 12px"
+                    >start:
+                  </label>
+                  <input
+                    required
+                    type="text"
+                    id="date-start"
+                    placeholder="DD/MM/YYYY"
+                    maxlength="10"
+                  />
+                  <img src="../assets/img/done.png" alt="" class="done-start" />
+                  <img
+                    src="../assets/img/error.png"
+                    alt=""
+                    class="error-start"
+                  />
                 </div>
-                <div>
-                  <label for="date-end" style="font-size: 12px">end:</label>
-                  <input type="text" id="date-end" />
+                <div class="date-wrapper">
+                  <label for="date-end" style="font-size: 12px">end: </label>
+                  <input
+                    required
+                    type="text"
+                    id="date-end"
+                    placeholder="DD/MM/YYYY"
+                    maxlength="10"
+                  />
+                  <img src="../assets/img/done.png" alt="" class="done-end" />
+                  <img src="../assets/img/error.png" alt="" class="error-end" />
                 </div>
               </div>
               <div class="permission-img">
-                <label for="student-img">Image:</label>
-                <input type="file" id="student-img" />
+                <label for="student-img">Image:&nbsp;<span>*</span></label>
+                <input required type="file" id="student-img" />
               </div>
               <div class="reason">
-                <label for="student-reason">Reason:</label>
-                <input type="text" id="student-reason" />
+                <label for="student-reason">Reason:&nbsp;<span>*</span></label>
+                <input
+                  required
+                  type="text"
+                  id="student-reason"
+                  placeholder="Enter the reason"
+                />
               </div>
               <div class="btn-wrapper">
                 <button type="submit" class="btn-send">Send</button>
