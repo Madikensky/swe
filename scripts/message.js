@@ -82,7 +82,9 @@ if (role === 'admin') {
         sender.setAttribute('data-sendDate', data.endDate)
         sender.setAttribute('data-subject', 'Permission')
         sender.setAttribute('data-content', data.reason)
-        sender.setAttribute('data-link', data.fileKey)
+        sender.setAttribute('data-link', data.fileContent)
+        sender.setAttribute('data-linkName', data.fileKey)
+        console.log(data)
       })
     })
     .then(() => {
@@ -104,6 +106,7 @@ if (role === 'admin') {
             tRow.innerHTML = attributes[i + 1].value
           })
           crtfLink.href = attributes[5].value
+          crtfLink.innerHTML = `${attributes[6].value}<img src="../assets/img/certificate.png" alt="" />`
           console.log(certificateTable.querySelectorAll('td'))
         })
       })

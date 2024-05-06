@@ -9,6 +9,8 @@ const inputs = document.querySelectorAll('input[type="text"]')
 inputs[0].value = userInfo.fullName
 inputs[1].value = userInfo.email
 
+console.log(inputs)
+
 const validityIcons = document.querySelectorAll('.date-wrapper img')
 console.log(validityIcons)
 
@@ -106,9 +108,38 @@ submitForm.addEventListener('submit', (e) => {
   overlay.style.display = 'block'
   loading.style.display = 'flex'
 
-  setTimeout(() => {
-    modalPerm.style.display = 'flex'
-  }, 3000)
+  // setTimeout(() => {
+  //   modalPerm.style.display = 'flex'
+  // }, 3000)
+
+  const tArea = document.querySelector('textarea').value
+
+  const formData = new FormData()
+  formData.append('file', inputFile.files[0])
+  formData.append('fullName', inputs[0].value)
+  formData.append('email', inputs[1].value)
+  formData.append('startDate', inputs[2].value)
+  formData.append('endDate', inputs[3].value)
+  formData.append('reason', tArea)
+
+  console.log(formData)
+
+  fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/permission/upload', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    body: formData,
+  })
+    .then((e) => {
+      if (!e.ok) {
+        throw new Error('Mistake!')
+      }
+      return e
+    })
+    .then((data) => {
+      modalPerm.style.display = 'flex'
+    })
 })
 
 exit.addEventListener('click', () => {
