@@ -124,7 +124,7 @@ submitForm.addEventListener('submit', (e) => {
 
   console.log(formData)
 
-  fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/permission/upload', {
+  fetch('https://sweproject.onrender.com/api/permission/upload', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${token}`,

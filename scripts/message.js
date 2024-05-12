@@ -23,7 +23,7 @@ loading.style.display = 'flex'
 
 if (role === 'admin') {
   table.style.display = 'none'
-  fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/permission/download', {
+  fetch('https://sweproject.onrender.com/api/permission/download', {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${token}`,

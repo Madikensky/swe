@@ -23,7 +23,7 @@ formLogin.addEventListener('submit', (e) => {
     password: psw.value,
   }
 
-  fetch('https://2nw1506q-8080.euw.devtunnels.ms/auth/login', {
+  fetch('https://sweproject.onrender.com/auth/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

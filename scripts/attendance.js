@@ -14,7 +14,7 @@ if (role === 'admin') {
   backWrapper.style.display = 'none'
   currBody.style.justifyContent = 'center'
   const table = document.querySelector('.table-admin')
-  fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/admin/attendance', {
+  fetch('https://sweproject.onrender.com/api/admin/attendance', {
     headers: {
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ if (role === 'admin') {
   const tableStatus = document.querySelector('.table-status')
   const btnBack = document.querySelector('.btn-back')
 
-  fetch('https://2nw1506q-8080.euw.devtunnels.ms/api/attendance', {
+  fetch('https://sweproject.onrender.com/api/attendance', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -225,19 +225,16 @@ if (role === 'admin') {
           const className = course.getAttribute('data-className')
           overlay.style.display = 'block'
           loading.style.display = 'flex'
-          fetch(
-            'https://2nw1506q-8080.euw.devtunnels.ms/api/attendance/class',
-            {
-              method: 'POST',
-              body: JSON.stringify({
-                classId: classId,
-              }),
-              headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${token}`,
-              },
-            }
-          )
+          fetch('https://sweproject.onrender.com/api/attendance/class', {
+            method: 'POST',
+            body: JSON.stringify({
+              classId: classId,
+            }),
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${token}`,
+            },
+          })
             .then((e) => {
               if (!e.ok) {
                 overlay.style.display = 'none'
